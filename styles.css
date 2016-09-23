@@ -1,3 +1,51 @@
 .favorite {
     background-color: lightblue
 }
+
+.userInfo {
+  position: relative;
+  padding: 15px;
+  borerd: 1px solid #F7F7F7;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  max-width: 300px;
+  margin: 25px 0;
+}
+
+.userInfo:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.userInfo img {
+  float: left;
+  margin-right: 10px;
+}
+
+.userMeta {
+  float: left;
+}
+
+.userMeta p {
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.userMeta p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.userMeta span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.userMeta span:hover {
+  background: rgb(136,180,143);
+}

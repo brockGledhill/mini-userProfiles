@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="styles.css"></link>
 </head>
 <body ng-controller="MainController">
-    
-    {{thisAppIsBroken}}
-    
+  <div ng-repeat="user in users" class="userInfo" ng-class="{favorite: user.isFavorite}">
+    <img ng-src="{{user.avatar}}">
+    <div class="userMeta">
+      <p>{{user.first_name}} {{user.last_name}}</p>
+      <p>ID: {{user.id}}</p>
+      <span ng-click="toggleFavorite(user.id)"> + </span>
+    </div>
+  </div>
+
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
      <script src="app.js"></script>
      <script src="controller.js"></script>
+     <script src="srvc.js"></script>
 </body>
 </html>
